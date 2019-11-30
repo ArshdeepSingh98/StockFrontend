@@ -1,26 +1,62 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import StockHome from './Components/StockHome/StockHome';
+import About from './Components/About/About';
+import {NoMatch} from "./Components/NoMatch/NoMatch";
+import {Layout} from "./Layouts/Layout";
+import {Navigationbar} from "./Components/NavigationBar/NavigationBar";
+import {Jumbotron} from "./Components/Jumbotron/Jumbotron";
+import autoBind from "react-autobind/src/autoBind";
+import {FAB} from "./Components/FloatingButton/FAB";
+import ChatMini from './Components/Chat/ChatMini/ChatMini';
+import UserProfile from "./Components/Profile/UserProfile";
+import AuthenticationPopUp from "./Components/Authentication/AuthenticationPopUp";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    constructor() {
+        super();
+
+        this.state = {
+            showChat: false,
+            showPopUp: true
+        };
+
+        autoBind(this);
+    }
+
+    handleChatMini() {
+        this.setState({ showChat: !this.state.showChat })
+    }
+
+    handleShowPopUp(popup) {
+        this.setState({showPopUp: popup })
+    }
+
+    componentDidMount() {
+    }
+
+    render() {
+        return (
+          <React.Fragment>
+            <Navigationbar />
+            <Jumbotron />
+            <Router>
+              <Layout>
+                <Switch>
+                  <Route exact path='/' render={() => <StockHome handleShowPopUp={this.handleShowPopUp}/>} />
+                  <Route path='/about' render={() => <About handleShowPopUp={this.handleShowPopUp}/>} />
+                  <Route path='/profile' render={() => <UserProfile handleShowPopUp={this.handleShowPopUp}/>} />
+                  <Route component={NoMatch} />
+                </Switch>
+              </Layout>
+            </Router>
+            {this.state.showChat ? <ChatMini showChat={this.state.showChat} handleClose={this.handleChatMini}/> : null}
+            {this.state.showPopUp ? <AuthenticationPopUp handleShowPopUp={this.handleShowPopUp}/> : null}
+            <FAB handleChat={this.handleChatMini}/>
+          </React.Fragment>
+        );
+    }
 }
 
 export default App;
