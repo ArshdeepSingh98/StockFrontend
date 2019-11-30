@@ -31,11 +31,26 @@ const Info = styled.input`
     height: 24px;
 `;
 
+const Checkbox = styled.input`
+    height: fit-content;
+    margin: 3px;
+`;
+
+const Label = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 14px;
+    font-size: 14px;
+    color: #272727;
+`;
+
 const Submit = styled.button`
     background-color: #222;
     color: white;
     border-radius: 24px;
     padding: 8px 16px;
+    margin: 6px 0 0 0;
 `;
 
 const Close = styled.div`
@@ -89,7 +104,7 @@ class AuthenticationPopUp extends Component {
                         <form action="" onSubmit={this.handleFormSubmit}>
                             <Info type="text" name='name' onChange={this.handleChange} placeholder="Name"/>
                             <Info type="text" name='email' onChange={this.handleChange} placeholder="E-Mail"/>
-                            <Info type="checkbox" name='remember' onChange={this.handleChange} placeholder="Remember Me" checked={this.state.remember}/>
+                            <Label><Checkbox type="checkbox" name='remember' onChange={this.handleChange} checked={this.state.remember}/>Remember Me</Label>
                             <Submit>Submit</Submit>
                         </form>
                     </PopUp>

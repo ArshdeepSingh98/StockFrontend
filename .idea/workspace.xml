@@ -3,14 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="8c0de075-1550-4124-88a1-db6d8957022b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Authentication/AuthenticationPopUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Authentication/AuthenticationPopUp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Profile/UserProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Profile/UserProfile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
