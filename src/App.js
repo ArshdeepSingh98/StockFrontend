@@ -51,9 +51,9 @@ class App extends Component {
               <Navigationbar />
               <Layout>
                 <Switch>
-                  <Route exact path='/' render={() => <StockHome handleShowPopUp={this.handleShowPopUp}/>} />
-                  <Route path='/about' render={() => <About handleShowPopUp={this.handleShowPopUp}/>} />
-                  <Route path='/profile' render={() => <UserProfile handleShowPopUp={this.handleShowPopUp}/>} />
+                  <Route exact path='/' render={() => <StockHome/>} />
+                  <Route path='/about' render={() => <About/>} />
+                  <Route path='/profile' render={() => <UserProfile />} />
                   <Route component={NoMatch} />
                 </Switch>
               </Layout>

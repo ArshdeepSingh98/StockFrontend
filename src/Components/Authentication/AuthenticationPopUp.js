@@ -52,7 +52,9 @@ class AuthenticationPopUp extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            name: '',
+            email: '',
+            remember: false
         };
 
         autoBind(this);
@@ -64,6 +66,19 @@ class AuthenticationPopUp extends Component {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
+    handleChange(e) {
+        const input = e.target;
+        const value = input.type === 'checkbox' ? input.checked : input.value;
+        this.setState({[input.name]:value})
+    }
+
+    handleFormSubmit = () => {
+        const { name, remember } = this.state;
+        localStorage.setItem('remember', remember);
+        localStorage.setItem('user', remember ? name : 'Guest');
+        this.props.handleShowPopUp(false);
+    };
+
     render() {
         return (
             <div>
@@ -71,10 +86,11 @@ class AuthenticationPopUp extends Component {
                     <PopUp>
                         <Close onClick={() => this.props.handleShowPopUp(false)}>+</Close>
                         <img src={'https://www.gravatar.com/avatar/00000000000000000000000000000' + this.getRandomIntInclusive(0, 999)+ '?d=retro&f=y'} alt=""/>
-                        <form action="">
-                            <Info type="text" placeholder="Name"/>
-                            <Info type="text" placeholder="E-Mail"/>
-                            <Submit href="">Submit</Submit>
+                        <form action="" onSubmit={this.handleFormSubmit}>
+                            <Info type="text" name='name' onChange={this.handleChange} placeholder="Name"/>
+                            <Info type="text" name='email' onChange={this.handleChange} placeholder="E-Mail"/>
+                            <Info type="checkbox" name='remember' onChange={this.handleChange} placeholder="Remember Me" checked={this.state.remember}/>
+                            <Submit>Submit</Submit>
                         </form>
                     </PopUp>
                 </Background>
