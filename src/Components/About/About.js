@@ -13,7 +13,6 @@ class About extends Component {
     }
 
     componentDidMount() {
-        this.props.handleShowPopUp(false);
     }
 
     render() {

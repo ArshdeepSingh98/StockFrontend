@@ -19,7 +19,7 @@ class App extends Component {
 
         this.state = {
             showChat: false,
-            showPopUp: true
+            showPopUp: localStorage.getItem('popupShown') ? (localStorage.getItem('popupShown') !== 'true') : true
         };
 
         autoBind(this);
@@ -30,18 +30,25 @@ class App extends Component {
     }
 
     handleShowPopUp(popup) {
+        if (!popup) {
+            localStorage.setItem('popupShown', 'true');
+        }
         this.setState({showPopUp: popup })
     }
 
     componentDidMount() {
     }
 
+    componentWillUnmount() {
+
+    }
+
     render() {
         return (
           <React.Fragment>
-            <Navigationbar />
             <Jumbotron />
             <Router>
+              <Navigationbar />
               <Layout>
                 <Switch>
                   <Route exact path='/' render={() => <StockHome handleShowPopUp={this.handleShowPopUp}/>} />

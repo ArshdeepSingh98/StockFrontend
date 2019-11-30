@@ -2,6 +2,7 @@ import React from "react";
 import styled from 'styled-components';
 import {Nav, Navbar} from 'react-bootstrap';
 import searchIcon from '../../Assets/Navbar/search-24px.svg';
+import {Link} from "react-router-dom";
 
 const Styles = styled.div`
     .navbar {
@@ -18,6 +19,22 @@ const Styles = styled.div`
     
     .search-icon {
         filter: invert(1);
+    }
+`;
+
+const LinkStyles = styled.div`
+    display: flex;
+    
+    .nav-item {
+        margin: 7px;
+    }
+    
+    a {
+        text-decoration: none;
+        
+        &:hover {
+            text-decoration: none;
+        }
     }
 `;
 
@@ -38,9 +55,11 @@ export const Navigationbar = () => (
                             </div>
                         </div>
                     </form>
-                    <Nav.Item><Nav.Link href='/'>Home</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href='/profile'>Profile</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href='/about'>About</Nav.Link></Nav.Item>
+                    <LinkStyles>
+                        <Nav.Item><Link to='/'>Home</Link></Nav.Item>
+                        <Nav.Item><Link to='/profile'>Profile</Link></Nav.Item>
+                        <Nav.Item><Link to='/about'>About</Link></Nav.Item>
+                    </LinkStyles>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

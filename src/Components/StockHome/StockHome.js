@@ -13,7 +13,6 @@ class StockHome extends Component {
     }
 
     componentDidMount() {
-        this.props.handleShowPopUp(true);
     }
 
     render() {

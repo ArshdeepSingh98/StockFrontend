@@ -13,7 +13,6 @@ class UserProfile extends Component {
     }
 
     componentDidMount() {
-        this.props.handleShowPopUp(false);
     }
 
     render() {
