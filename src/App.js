@@ -12,6 +12,7 @@ import {FAB} from "./Components/FloatingButton/FAB";
 import ChatMini from './Components/Chat/ChatMini/ChatMini';
 import UserProfile from "./Components/Profile/UserProfile";
 import AuthenticationPopUp from "./Components/Authentication/AuthenticationPopUp";
+import {News} from "./Components/News/News";
 
 class App extends Component {
     constructor() {
@@ -60,6 +61,7 @@ class App extends Component {
             </Router>
             {this.state.showChat ? <ChatMini showChat={this.state.showChat} handleClose={this.handleChatMini}/> : null}
             {this.state.showPopUp ? <AuthenticationPopUp handleShowPopUp={this.handleShowPopUp}/> : null}
+            <News/>
             <FAB handleChat={this.handleChatMini}/>
           </React.Fragment>
         );
