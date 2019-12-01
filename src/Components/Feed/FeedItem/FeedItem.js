@@ -16,6 +16,7 @@ const FeedStyle = styled.div`
         font-size: 14px;
         background-color: #282828;
         padding: 8px 16px;
+        white-space: pre-wrap;
     }
     
     .feed_actions {
