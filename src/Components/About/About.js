@@ -15,6 +15,7 @@ const AboutStyle = styled.div`
     p {
         margin-left: 8px;
         font-size: 16px;
+        color: #d6d6d6;
     }
 `;
 
