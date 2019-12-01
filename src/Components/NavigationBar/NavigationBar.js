@@ -1,8 +1,9 @@
 import React from "react";
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import {Nav, Navbar} from 'react-bootstrap';
 import searchIcon from '../../Assets/Navbar/search-24px.svg';
 import {Link} from "react-router-dom";
+import Logo from '../../Assets/Navbar/trending_up-24px.svg';
 
 const Styles = styled.div`
     .navbar {
@@ -38,10 +39,29 @@ const LinkStyles = styled.div`
     }
 `;
 
+const rotate = keyframes`
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+`;
+
+const NavIcon = styled.img`
+    filter: invert(1);
+    margin: 0 8px 0 0;
+    animation: ${rotate} 4s linear infinite;
+`;
+
 export const Navigationbar = () => (
     <Styles>
         <Navbar fixed='top' bg='dark' variant='dark' expand='lg'>
-            <Navbar.Brand href='/'>Stock Application</Navbar.Brand>
+            <Navbar.Brand href='/'>
+                <NavIcon src={Logo} alt='' />
+                Stock Application
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls='basic-navbar-nav'/>
             <Navbar.Collapse id='basic-navbar-nav'>
                 <Nav className='ml-auto'>
