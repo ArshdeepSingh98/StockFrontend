@@ -15,6 +15,7 @@ const NewsCompenent = styled.div`
     height: 250px;
     position: fixed;
     right: 0;
+    top: 310px;
     margin-right: 45px;
     z-index: -1;
     
@@ -94,8 +95,6 @@ export const News = () => {
             </NewsContainer>
         )
     });
-
-    console.log("News : ", NewsToShow);
 
     return (
         <React.Fragment>

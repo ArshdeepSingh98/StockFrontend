@@ -14,7 +14,7 @@ const Styles = styled.div`
         
         &:hover {
             color: white;
-        }
+        }   
     }
     
     .search-icon {
