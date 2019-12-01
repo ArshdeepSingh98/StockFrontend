@@ -105,7 +105,7 @@ const FeedDetails = styled.div`
 `;
 
 export const FeedItem = (props) => {
-    const {id, profile: {name, image}, date, time, description, action_details: {like, comment}} = props.feed
+    const {profile: {name, image}, date, time, description, action_details: {like, comment}} = props.feed
 
     return (
         <FeedStyle>

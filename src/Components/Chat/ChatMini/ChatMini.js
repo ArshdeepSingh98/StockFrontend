@@ -1,6 +1,12 @@
 import React, {Component} from 'react'
 import {Launcher} from 'react-chat-window'
+import styled from 'styled-components';
 
+const ChatStyle = styled.div`
+  .sc-chat-window {
+    z-index: 1;
+  }
+`;
 
 export default class ChatMini extends Component {
   constructor() {
@@ -36,17 +42,19 @@ export default class ChatMini extends Component {
 
   render() {
     return (
-        <Launcher
-          agentProfile={{
-            teamName: 'Chat Bot',
-            imageUrl: 'https://www.gravatar.com/avatar/0000000000000000000000000000000' + this.getRandomIntInclusive(1, 20) + '?d=robohash&f=y'
-          }}
-          handleClick={this.props.handleClose}
-          isOpen={this.props.showChat}
-          onMessageWasSent={this._onMessageWasSent.bind(this)}
-          messageList={this.state.messageList}
-          showEmoji
-        />
+        <ChatStyle>
+          <Launcher
+            agentProfile={{
+              teamName: 'Chat Bot',
+              imageUrl: 'https://www.gravatar.com/avatar/0000000000000000000000000000000' + this.getRandomIntInclusive(1, 20) + '?d=robohash&f=y'
+            }}
+            handleClick={this.props.handleClose}
+            isOpen={this.props.showChat}
+            onMessageWasSent={this._onMessageWasSent.bind(this)}
+            messageList={this.state.messageList}
+            showEmoji
+          />
+        </ChatStyle>
     )
   }
 }

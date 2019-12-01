@@ -17,7 +17,7 @@ const NewsCompenent = styled.div`
     right: 0;
     top: 310px;
     margin-right: 45px;
-    z-index: -1;
+    z-index: 0;
     
     .topic {
         border-bottom: 1px solid #ffeaea;
