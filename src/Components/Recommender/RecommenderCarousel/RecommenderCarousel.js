@@ -96,6 +96,7 @@ const RecContainer = styled.div`
         border-radius: 2px;
         background: #0e437b;
         color: white;
+        cursor: pointer;
     }
 `;
 
