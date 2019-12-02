@@ -25,7 +25,7 @@ class About extends Component {
         super(props);
         this.state = {
 
-        }
+        };
 
         autoBind(this);
     }

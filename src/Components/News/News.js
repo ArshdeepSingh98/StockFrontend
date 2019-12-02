@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import NEWS_DATA from "../../MockData/NewsMock";
 
-const NewsCompenent = styled.div`
+const NewsComponent = styled.div`
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -87,7 +87,7 @@ export const News = () => {
         dots: true
     };
 
-    let     NewsToShow = NEWS_DATA.newsList.map(news => {
+    let NewsToShow = NEWS_DATA.newsList.map(news => {
         return (
             <NewsContainer key={news.id}>
                 <div className='description'>{news.description}</div>
@@ -99,10 +99,10 @@ export const News = () => {
     return (
         <React.Fragment>
             {NewsToShow.length > 0 &&
-                <NewsCompenent>
+                <NewsComponent>
                     <div className='topic'> News </div>
                     <Slider {...settings}> {NewsToShow} </Slider>
-                </NewsCompenent>
+                </NewsComponent>
             }
         </React.Fragment>
     )

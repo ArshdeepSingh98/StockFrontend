@@ -1,4 +1,4 @@
-export const NEWS_DATA = {
+export const FEED_DATA = {
     "feedList": [
         {
             "id": 1,
@@ -73,4 +73,4 @@ export const NEWS_DATA = {
     ]
 };
 
-export default NEWS_DATA;
+export default FEED_DATA;
