@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from 'react-bootstrap';
-import "./Layout.css";
+import "./Layout.scss";
 
 
 export const Layout = (props) => (

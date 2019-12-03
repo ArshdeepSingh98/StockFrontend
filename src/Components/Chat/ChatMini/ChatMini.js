@@ -5,6 +5,10 @@ import styled from 'styled-components';
 const ChatStyle = styled.div`
   .sc-chat-window {
     z-index: 1;
+    
+    @media (max-width: 1000px) {
+      height: 75%;
+    }
   }
 `;
 

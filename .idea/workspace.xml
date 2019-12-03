@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c0de075-1550-4124-88a1-db6d8957022b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Layouts/Layout.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Chat/ChatMini/ChatMini.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Chat/ChatMini/ChatMini.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/News/News.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/News/News.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Recommender/RecommenderCarousel/RecommenderCarousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Recommender/RecommenderCarousel/RecommenderCarousel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Layouts/Layout.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Layouts/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Layouts/Layout.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +121,7 @@
       <workItem from="1575274414656" duration="2000" />
       <workItem from="1575275704465" duration="172000" />
       <workItem from="1575300471885" duration="11308000" />
-      <workItem from="1575365303839" duration="2369000" />
+      <workItem from="1575365303839" duration="5160000" />
     </task>
     <servers />
   </component>

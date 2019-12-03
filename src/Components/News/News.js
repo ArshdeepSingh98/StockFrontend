@@ -11,13 +11,21 @@ const NewsComponent = styled.div`
     text-align: center;
     border-radius: 4px;
     background: white;
-    width: 300px;
+    width: 15%;
     height: 250px;
     position: fixed;
     right: 0;
     top: 310px;
-    margin-right: 45px;
+    margin-right: 1%;
     z-index: 0;
+    
+    @media (min-width: 1700px) {
+        margin-right: 2.5%;
+    }
+    
+    @media (max-width: 1600px) {
+        display: none;
+    }
     
     .topic {
         border-bottom: 1px solid #ffeaea;

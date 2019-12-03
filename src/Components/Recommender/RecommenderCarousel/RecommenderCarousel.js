@@ -14,13 +14,21 @@ const RecComponent = styled.div`
     text-align: center;
     border-radius: 4px;
     background: #222;
-    width: 300px;
+    width: 15%;
     height: 360px;
     position: absolute;
     left: 0;
     top: 310px;
-    margin-left: 45px;
+    margin-left: 1%;
     z-index: 0;
+    
+    @media (min-width: 1700px) {
+        margin-left: 2.5%;
+    }
+    
+    @media (max-width: 1600px) {
+        display: none;
+    }
     
     .topic {
         font-size: 18px;
