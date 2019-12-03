@@ -125,7 +125,7 @@ class RecommenderCarousel extends React.Component {
             centerMode: false,
             swipeToSlide: true,
             autoplay: false,
-            arrows: false,
+            arrows: true,
             focusOnSelect: false,
             dots: true
         };
