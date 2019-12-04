@@ -12,21 +12,21 @@ const IntroComponent = styled.div`
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 40%;
+    width: ${isMobile() ? '98%' : '40%'};
+    height: ${isMobile() ? '100%' : 'auto'};
     position: fixed;
     margin-left: auto;
     margin-right: auto;
     right: 30%;
-    left: 30%;
+    left: ${isMobile() ? '0' : '30%'};
     right: 30%;
-    top: 20%;
-    z-index: 3;
+    top: ${isMobile() ? '0' : '20%'};
+    z-index: ${isMobile() ? '1030' : '3'};
     
     .get_started {
         position: absolute;
         bottom: 20px;
-        left: 35%;
-        right: 35%;
+        left: ${isMobile() ? '31%' : '39%'};
         display: flex;
         justify-content: center;
         height: 40px;
@@ -40,10 +40,11 @@ const IntroComponent = styled.div`
         padding: 16px;
         border-radius: 4px;
         cursor: pointer;
+        width: fit-content;
     }
     
     .slick-dots {
-        bottom: 10px;
+        bottom: ${isMobile() ? '80px' : '10px'};
     }
     
     .slick-dots li.slick-active button:before {
@@ -56,10 +57,11 @@ const IntroContainer = styled.div`
     display: flex !important;
     flex-direction: column;
     padding: 32px;
-    border-radius: 20px;
+    border-radius: ${isMobile() ? '0' : '20px'};
     justify-content: space-between;
     align-items: center;
     background: ${props => props.color} 
+    height: ${isMobile() ? '100vh' : 'auto'};
     
     .img_container {
         margin: 10px;
@@ -161,7 +163,7 @@ export const IntroCarousel = (props) => {
         centerMode: false,
         swipeToSlide: false,
         autoplay: false,
-        arrows: true,
+        arrows: !isMobile(),
         fade: true,
         focusOnSelect: false,
         dots: true,

@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8c0de075-1550-4124-88a1-db6d8957022b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Authentication/AuthenticationPopUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Authentication/AuthenticationPopUp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MockData/FeedMock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MockData/FeedMock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MockData/NewsMock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MockData/NewsMock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MockData/RecommenderMock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MockData/RecommenderMock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/IntroCarousel/IntroCarousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/IntroCarousel/IntroCarousel.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -121,7 +117,7 @@
       <workItem from="1575274414656" duration="2000" />
       <workItem from="1575275704465" duration="172000" />
       <workItem from="1575300471885" duration="11308000" />
-      <workItem from="1575365303839" duration="12691000" />
+      <workItem from="1575365303839" duration="13863000" />
     </task>
     <servers />
   </component>
