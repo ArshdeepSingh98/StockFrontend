@@ -1,4 +1,4 @@
-export const NEWS_DATA = {
+const NEWS_DATA = {
     "newsList": [
         {
             "id": 1,

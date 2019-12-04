@@ -1,4 +1,4 @@
-export const RECOMMENDER_DATA = {
+const RECOMMENDER_DATA = {
     "userList": [
         {
             "id": 1,

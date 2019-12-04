@@ -1,4 +1,4 @@
-export const FEED_DATA = {
+const FEED_DATA = {
     "feedList": [
         {
             "id": 1,

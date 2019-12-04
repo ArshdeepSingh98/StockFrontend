@@ -14,6 +14,7 @@ import UserProfile from "./Components/Profile/UserProfile";
 import AuthenticationPopUp from "./Components/Authentication/AuthenticationPopUp";
 import {News} from "./Components/News/News";
 import RecommenderCarousel from "./Components/Recommender/RecommenderCarousel/RecommenderCarousel";
+import {IntroCarousel} from "./Components/IntroCarousel/IntroCarousel";
 
 class App extends Component {
     constructor() {
@@ -21,7 +22,8 @@ class App extends Component {
 
         this.state = {
             showChat: false,
-            showPopUp: localStorage.getItem('popupShown') ? (localStorage.getItem('popupShown') !== 'true') : true
+            showPopUp: localStorage.getItem('popupShown') ? (localStorage.getItem('popupShown') !== 'true') : true,
+            showIntro: localStorage.getItem('introShown') ? (localStorage.getItem('introShown') !== 'true') : true
         };
 
         autoBind(this);
@@ -36,6 +38,13 @@ class App extends Component {
             localStorage.setItem('popupShown', 'true');
         }
         this.setState({showPopUp: popup })
+    }
+
+    handleShowIntro(intro) {
+        if (!intro) {
+            localStorage.setItem('introShown', 'true');
+        }
+        this.setState({showIntro: intro})
     }
 
     componentDidMount() {
@@ -62,6 +71,7 @@ class App extends Component {
             </Router>
             {this.state.showChat ? <ChatMini showChat={this.state.showChat} handleClose={this.handleChatMini}/> : null}
             {this.state.showPopUp ? <AuthenticationPopUp handleShowPopUp={this.handleShowPopUp}/> : null}
+            {this.state.showIntro ? <IntroCarousel handleShowIntro={this.handleShowIntro}/> : null}
             <News/>
             <RecommenderCarousel/>
             <FAB handleChat={this.handleChatMini}/>
